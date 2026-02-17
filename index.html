@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Pokémon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1> Pokédex</h1>
+        <p>Galería de Pokémon con PokeAPI</p>
+    </header>
+>
+    <div class="buscador">
+        <input type="text" id="input-buscar" placeholder="Buscar pokémon por nombre...">
+        <button onclick="buscarPokemon()">Buscar</button>
+    </div>
+
+   
+    <div id="mensaje-error" class="error escondido">
+         No se pudo cargar la información. Revisa tu conexión a internet.
+    </div>
+
+    <div id="pokemon-lista" class="grid-pokemon"></div>
+
+ 
+    <div id="modal" class="modal escondido">
+        <div class="modal-contenido">
+            <button class="cerrar-modal" onclick="cerrarModal()">✕</button>
+            <div id="modal-info"></div>
+        </div>
+    </div>
+
+    <div class="centro">
+        <button id="btn-cargar-mas" onclick="cargarMas()">Cargar más Pokémon</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
